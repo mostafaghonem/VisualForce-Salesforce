@@ -1,0 +1,39 @@
+<apex:page >
+    <apex:pageBlock title="User Status">
+        <apex:pageBlockSection columns="1">
+            {! $User.FirstName &' '& $User.LastName}
+            {! $User.UserName} 
+            <p>
+                Today's Date is {!Today()}
+            </p>
+            <p>
+                Next Week will be {!Today() + 7}
+            </p>
+            <p>
+                the year today {! Year(Today())}
+            </p>
+            <p>
+                Tomorrow will be day number {! Day(Today())+1}
+            </p>
+            <p>
+                Let's Find Maximum {! Max(1,2,3,4,5,5,6,9)}
+            </p>
+            <p>
+                the square root of 49 is {!SQRT(49)}
+            </p>
+            <p>
+                Is it true ? {!Contains('SalesForce.com' , 'Force.com')}
+            </p>
+            <p>
+                Conditional Experession IF:
+                {! IF( Contains('SalesForce.com' , 'Force.com') , 'Yep', 'Nope')}
+            </p>
+            <p>
+                {! IF( DAY(Today()) < 15 , 'Before the 15th' , 'the 15th or after')}
+            </p>
+            <p>
+                {! IF($User.IsActive , $User.UserName , 'Inactive')}
+            </p>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
