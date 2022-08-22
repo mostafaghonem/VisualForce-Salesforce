@@ -1,5 +1,5 @@
 <apex:page standardController="Contact" recordSetVar="contacts">
-    <apex:form>
+    <apex:form >
 
         <apex:pageBlock title="Contacts List" id="contacts_list">
 
